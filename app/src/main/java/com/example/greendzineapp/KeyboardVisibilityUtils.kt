@@ -21,7 +21,7 @@ class KeyboardVisibilityUtils {
             override fun onGlobalLayout() {
                 activityRootView.getWindowVisibleDisplayFrame(r)
                 val heightDiff = activityRootView.rootView.height - (r.bottom - r.top)
-                val isOpen = heightDiff > 200 // if more than 200 pixels, its probably a keyboard...
+                val isOpen = heightDiff > 200
                 if (isOpen == wasOpened) {
                     return
                 }
