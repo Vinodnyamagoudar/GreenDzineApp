@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.widget.SearchView
 import com.example.greendzineapp.databinding.FragmentProfileBinding
-import androidx.core.view.updateLayoutParams
 
 class ProfileFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
@@ -25,19 +24,14 @@ class ProfileFragment : Fragment() {
         val binding = FragmentProfileBinding.inflate(inflater, container, false)
         recyclerView = binding.rvEmpDetails
         searchView = binding.searchView
-
-        // Load employee data
         employeeDataList = Utils.loadEmployeeData(requireContext())
 
-        // Set up RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         adapter = EmployeeAdapter()
         recyclerView.adapter = adapter
 
-        // Submit the initial list
         adapter.submitList(employeeDataList)
 
-        // Set up SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false

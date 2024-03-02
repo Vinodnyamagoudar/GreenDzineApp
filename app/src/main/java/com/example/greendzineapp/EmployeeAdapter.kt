@@ -6,9 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-
 import androidx.recyclerview.widget.ListAdapter
-import com.example.greendzineapp.EmployeeDataItem
 
 class EmployeeAdapter : ListAdapter<EmployeeDataItem, EmployeeAdapter.EmployeeViewHolder>(DiffCallback) {
 

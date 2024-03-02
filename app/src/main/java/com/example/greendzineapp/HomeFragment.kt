@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.rv_productivity)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter =
-            ProductivityAdapter(productivityDataList) // Pass the loaded data directly
+            ProductivityAdapter(productivityDataList)
         return view
     }
 }
