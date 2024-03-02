@@ -11,12 +11,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-            // validation of the email and password in the activity
-            startActivity(Intent(this@MainActivity,HomeActivity::class.java))
-            finish()
+            startActivity(Intent(this,HomeActivity::class.java))
         }
     }
 }
