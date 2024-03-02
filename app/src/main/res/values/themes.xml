@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.GreenDzineApp" parent="Base.Theme.GreenDzineApp" />
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Hint color -->
+        <item name="android:textColorHint">#FFAABBCC</item>
+    </style>
+
 </resources>

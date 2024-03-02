@@ -1,9 +1,14 @@
 package com.example.greendzineapp
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.greendzineapp.databinding.ActivityHomeBinding
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.IOException
+import com.example.greendzineapp.Users
 
 class HomeActivity : AppCompatActivity() {
 

@@ -9,21 +9,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        // In your HomeFragment or any other Fragment/Activity
-
         val productivityDataList = Utils.loadProductivityData(requireContext())
-
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val recyclerView: RecyclerView = view.findViewById(R.id.rv_productivity)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = ProductivityAdapter(productivityDataList) // Pass the loaded data directly
+        recyclerView.adapter =
+            ProductivityAdapter(productivityDataList) // Pass the loaded data directly
         return view
     }
 }
