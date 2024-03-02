@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
 
@@ -13,6 +15,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        // In your HomeFragment or any other Fragment/Activity
+
+        val productivityDataList = Utils.loadProductivityData(requireContext())
+
+
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val recyclerView: RecyclerView = view.findViewById(R.id.rv_productivity)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = ProductivityAdapter(productivityDataList) // Pass the loaded data directly
+        return view
     }
 }

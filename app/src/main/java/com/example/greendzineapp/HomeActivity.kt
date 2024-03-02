@@ -12,7 +12,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_home)
+        setContentView(binding.root)
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
